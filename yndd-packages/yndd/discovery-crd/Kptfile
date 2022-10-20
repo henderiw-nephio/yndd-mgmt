@@ -1,0 +1,20 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /discovery-crd
+  name: discovery-crd
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|discovery-crd'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/yndd/discovery
+    directory: /blueprint/discovery/crd
+    ref: v0.0.4
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/yndd/discovery
+    directory: /blueprint/discovery/crd
+    ref: v0.0.4
+    commit: c4169c1ae49f31a6921aeadf1e0e5f65ed395e3d

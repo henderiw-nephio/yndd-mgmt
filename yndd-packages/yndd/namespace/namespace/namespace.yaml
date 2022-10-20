@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata: # kpt-merge: /ndd-system
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/component: namespace
+    app.kubernetes.io/instance: yndd
+    app.kubernetes.io/managed-by: kpt
+    app.kubernetes.io/name: yndd
+    app.kubernetes.io/part-of: yndd
+  name: ndd-system
+  annotations:
+    internal.kpt.dev/upstream-identifier: '|Namespace|default|ndd-system'
+spec: {}
+status: {}
