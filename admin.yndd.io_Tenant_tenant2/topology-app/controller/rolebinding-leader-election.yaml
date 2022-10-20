@@ -1,0 +1,20 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: # kpt-merge: ndd-system/topology-controller-leader-election-role-binding
+  labels:
+    app.kubernetes.io/component: tbd
+    app.kubernetes.io/instance: tbd
+    app.kubernetes.io/managed-by: kpt
+    app.kubernetes.io/name: topology
+    app.kubernetes.io/part-of: topology
+    app.kubernetes.io/version: tbd
+  name: topology-controller-leader-election-role-binding
+  namespace: tenant2
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: topology-controller-leader-election-role
+subjects:
+- kind: ServiceAccount
+  name: topology-controller
+  namespace: tenant2
