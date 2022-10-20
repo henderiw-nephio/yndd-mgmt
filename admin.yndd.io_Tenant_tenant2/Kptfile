@@ -1,0 +1,8 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: admin.yndd.io_Tenant_tenant2
+  annotations:
+    config.kubernetes.io/local-config: "true"
+info:
+  description: admin.yndd.io_Tenant_tenant2
